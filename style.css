@@ -1,0 +1,30 @@
+.ext-paid-notify {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    background-color: #EF6644;
+    border-bottom: 2px solid #AF4B31;
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+    transition: top 1s ease-out;
+}
+
+.ext-paid-notify-close-btn {
+    float: right;
+    padding: 14px 20px;
+    margin: -20px;
+    font-size: 1.5em;
+    background-color: #AF4B31;
+    cursor: pointer;
+}
+
+.ext-paid-notify-close-btn:hover {
+    opacity: .8;
+}
+
+.ext-paid-notify-close-btn:active{
+    opacity: .9;
+}
