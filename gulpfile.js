@@ -25,7 +25,7 @@ gulp.task('move', function () {
 
 // zip them all
 gulp.task('zip', ['uglify', 'move'], function () {
-    return gulp.src('dist/*')
+    gulp.src('dist/*')
         .pipe(zip('paid-notify.zip'))
         .pipe(gulp.dest('./'));
 });
