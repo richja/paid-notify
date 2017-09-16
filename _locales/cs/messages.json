@@ -3,9 +3,9 @@
     "message": "Varování před placeným obsahem"
   },
   "extDesc": {
-    "message": "Dostaňte včas varování o tom, že se chystáte číst článek zahrnutý v placeném obsahu."
+    "message": "Dostaňte včas varování o tom, že se chystáte číst pouze úryvek článku zahrnutého v placeném obsahu."
   },
   "extMessage": {
-    "message": "Pozor, tento článek je placený"
+    "message": "Pozor, jedná se pouze o úryvek placeného obsahu"
   }
 }

@@ -4,11 +4,11 @@
     "description": "The title of the application, displayed in the web store."
   },
   "extDesc": {
-    "message": "Don't waste your time. Get notified when you are about to read article with paid content. No more surprises in the middle of an article.",
+    "message": "Don't waste your time. Get notified when you are about to read just a snippet of an article with paid content. No more surprises in the middle of an article you are just reading.",
     "description":"The description of the application, displayed in the web store."
   },
   "extMessage": {
-    "message": "Beware, this is a snippet of paid article",
-    "description":"Message displayed for paid article"
+    "message": "Beware, this is just a snippet of paid article",
+    "description":"Message displayed for a snippet of paid article"
   }
 }
