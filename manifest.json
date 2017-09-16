@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "version": "0.1",
+  "description": "__MSG_extDesc__",
+  "default_locale": "en",
+  "author": "Jan Richter",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "*://*.digizone.cz/*",
+        "*://*.wsj.com/articles/*",
+        "*://*.thetimes.co.uk/*",
+        "*://*.welt.de/*"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Paid Content Alert",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "extDesc": {
+    "message": "Don't waste your time. Get notified when you are about to read article with paid content. No more surprises in the middle of an article.",
+    "description":"The description of the application, displayed in the web store."
+  },
+  "extMessage": {
+    "message": "Beware, beware, beware",
+    "description":"Message displayed for paid article"
+  }
+}
