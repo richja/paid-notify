@@ -19,7 +19,16 @@
         "*://*.digizone.cz/*",
         "*://*.wsj.com/articles/*",
         "*://*.thetimes.co.uk/*",
-        "*://*.welt.de/*"
+        "*://*.welt.de/*",
+        "*://*.reportermagazin.cz/a/*",
+        "*://*.bild.de/bild-plus/*",
+        "*://*.dtest.cz/*",
+        "*://*.psychologie.cz/*",
+        "*://*.montyrich.cz/*",
+        "*://*.echo24.cz/a/*",
+        "*://*.067.cz/archiv/*",
+        "*://*.telegraph.co.uk/*",
+        "*://*.investors.com/*"
       ],
       "css": [
         "style.css"

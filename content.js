@@ -3,36 +3,105 @@ checkForPaidContent(document.location.host);
 function checkForPaidContent(host) {
 
     //digizone.cz
-    if (host.indexOf("digizone.cz")) {
+    if (host.indexOf("digizone.cz") !==-1) {
         if (document.getElementsByClassName("paymentRequest").length) {
             showNotification();
-            return;
         }
+        return;
     }
 
     //wsj.com
-    if (host.indexOf("wsj.com")) {
-
+    if (host.indexOf("wsj.com") !==-1) {
         if (document.getElementsByClassName("wsj-snippet-body").length) {
             showNotification();
-            return;
         }
+        return;
     }
 
     //the times.co.uk
-    if (host.indexOf("thetimes.co.uk")) {
-
+    if (host.indexOf("thetimes.co.uk") !==-1) {
         if (document.getElementsByClassName("ArticleMarketing").length) {
             showNotification();
-            return;
         }
+        return;
     }
 
     //welt.de
-    if (host.indexOf("welt.de")) {
+    if (host.indexOf("welt.de") !==-1) {
         if (document.querySelectorAll("[data-external-component='Premium.Article.Content']").length) {
             showNotification();
-            return;
+        }
+        return;
+    }
+
+    //reportermagazin.cz
+    if (host.indexOf("reportermagazin.cz") !==-1) {
+        if (document.getElementsByClassName("article-lock").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //bild.de
+    if (host.indexOf("bild.de") !==-1) {
+        if (document.getElementsByClassName("conversion-page").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //dtest.cz
+    if (host.indexOf("dtest.cz") !==-1) {
+        if (document.getElementsByClassName("login-buy-box").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //psychologie.cz
+    if (host.indexOf("psychologie.cz") !==-1) {
+        if (document.getElementsByClassName("about-pay-info").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //montyrich.cz
+    if (host.indexOf("montyrich.cz") !==-1) {
+        if (document.getElementById("component-news-premium")) {
+            showNotification();
+        }
+        return;
+    }
+
+    //echo24.cz
+    if (host.indexOf("echo24.cz") !==-1) {
+        if (document.getElementsByClassName("lockBlock").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //067.cz
+    if (host.indexOf("067.cz") !==-1) {
+        if (document.getElementsByClassName("blocked").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //telegraph.co.uk
+    if (host.indexOf("telegraph.co.uk") !==-1) {
+        if (document.getElementsByClassName("premium-paywall").length) {
+            showNotification();
+        }
+        return;
+    }
+
+    //investors.com
+    if (host.indexOf("investors.com") !==-1) {
+        if (document.getElementsByClassName("access_level-restricted").length) {
+            showNotification();
         }
     }
 }
