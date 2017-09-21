@@ -7,7 +7,8 @@ var files = [
     'icon48.png',
     'icon128.png',
     'style.css',
-    'manifest.json'
+    'manifest.json',
+    '_locales/**/*.*'
 ];
 
 // compress js files

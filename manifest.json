@@ -28,7 +28,8 @@
         "*://*.echo24.cz/a/*",
         "*://*.067.cz/archiv/*",
         "*://*.telegraph.co.uk/*",
-        "*://*.investors.com/*"
+        "*://*.investors.com/*",
+        "*://*.e15.cz/*"
       ],
       "css": [
         "style.css"

@@ -1,108 +1,53 @@
-checkForPaidContent(document.location.host);
+var sites = [
+    ["digizone.cz", searchForClass, "paymentRequest"],
+    ["e15.cz", searchForClass, "subscription-box"],
+    ["wsj.com", searchForClass, "wsj-snippet-body"],
+    ["thetimes.co.uk", searchForClass, "ArticleMarketing"],
+    ["welt.de", searchForSelector, "[data-external-component='Premium.Article.Content']"],
+    ["reportermagazin.cz", searchForClass, "article-lock"],
+    ["bild.de", searchForClass, "conversion-page"],
+    ["dtest.cz", searchForClass, "login-buy-box"],
+    ["psychologie.cz", searchForClass, "about-pay-info"],
+    ["montyrich.cz", searchForId, "component-news-premium"],
+    ["echo24.cz", searchForClass, "lockBlock"],
+    ["067.cz", searchForClass, "blocked"],
+    ["telegraph.co.uk", searchForClass, "premium-paywall"],
+    ["investors.com", searchForClass, "access_level-restricted"]
+];
 
-function checkForPaidContent(host) {
+checkForPaidContent(document.location.host, sites);
 
-    //digizone.cz
-    if (host.indexOf("digizone.cz") !==-1) {
-        if (document.getElementsByClassName("paymentRequest").length) {
-            showNotification();
+function checkForPaidContent(host, sites) {
+
+    var siteMatch  = null;
+    var siteMatchResult = sites.some(function(site){
+        if (host.indexOf(site[0]) !==-1) {
+            siteMatch = site;
+            return site;
         }
-        return;
+    });
+
+    if (!siteMatchResult) return;
+
+    console.log(siteMatch);
+    siteMatch[1](siteMatch[2]);
+}
+
+function searchForClass(className) {
+    if (document.getElementsByClassName(className).length) {
+        showNotification();
     }
+}
 
-    //wsj.com
-    if (host.indexOf("wsj.com") !==-1) {
-        if (document.getElementsByClassName("wsj-snippet-body").length) {
-            showNotification();
-        }
-        return;
+function searchForId(idName) {
+    if (document.getElementById(idName)) {
+        showNotification();
     }
+}
 
-    //the times.co.uk
-    if (host.indexOf("thetimes.co.uk") !==-1) {
-        if (document.getElementsByClassName("ArticleMarketing").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //welt.de
-    if (host.indexOf("welt.de") !==-1) {
-        if (document.querySelectorAll("[data-external-component='Premium.Article.Content']").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //reportermagazin.cz
-    if (host.indexOf("reportermagazin.cz") !==-1) {
-        if (document.getElementsByClassName("article-lock").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //bild.de
-    if (host.indexOf("bild.de") !==-1) {
-        if (document.getElementsByClassName("conversion-page").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //dtest.cz
-    if (host.indexOf("dtest.cz") !==-1) {
-        if (document.getElementsByClassName("login-buy-box").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //psychologie.cz
-    if (host.indexOf("psychologie.cz") !==-1) {
-        if (document.getElementsByClassName("about-pay-info").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //montyrich.cz
-    if (host.indexOf("montyrich.cz") !==-1) {
-        if (document.getElementById("component-news-premium")) {
-            showNotification();
-        }
-        return;
-    }
-
-    //echo24.cz
-    if (host.indexOf("echo24.cz") !==-1) {
-        if (document.getElementsByClassName("lockBlock").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //067.cz
-    if (host.indexOf("067.cz") !==-1) {
-        if (document.getElementsByClassName("blocked").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //telegraph.co.uk
-    if (host.indexOf("telegraph.co.uk") !==-1) {
-        if (document.getElementsByClassName("premium-paywall").length) {
-            showNotification();
-        }
-        return;
-    }
-
-    //investors.com
-    if (host.indexOf("investors.com") !==-1) {
-        if (document.getElementsByClassName("access_level-restricted").length) {
-            showNotification();
-        }
+function searchForSelector(query) {
+    if (document.querySelectorAll(query).length) {
+        showNotification();
     }
 }
 
@@ -125,4 +70,3 @@ function showNotification() {
         closeNotification(notifyDiv);
     });
 }
-
