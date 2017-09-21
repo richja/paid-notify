@@ -29,7 +29,15 @@
         "*://*.067.cz/archiv/*",
         "*://*.telegraph.co.uk/*",
         "*://*.investors.com/*",
-        "*://*.e15.cz/*"
+        "*://*.e15.cz/*",
+        "*://*.irishtimes.com/*",
+        "*://*.valor.com.br/*",
+        "*://*.kyivpost.com/*",
+        "*://*.haaretz.com/*",
+        "*://*.theaustralian.com.au/*",
+        "*://*.lefigaro.fr/*",
+        "*://*.folha.uol.com.br/*",
+        "*://*.ekonom.ihned.cz/*"
       ],
       "css": [
         "style.css"

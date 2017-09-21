@@ -1,4 +1,5 @@
 var sites = [
+    //hostname, function to call, argument for function, [delay in seconds]
     ["digizone.cz", searchForClass, "paymentRequest"],
     ["e15.cz", searchForClass, "subscription-box"],
     ["wsj.com", searchForClass, "wsj-snippet-body"],
@@ -12,7 +13,14 @@ var sites = [
     ["echo24.cz", searchForClass, "lockBlock"],
     ["067.cz", searchForClass, "blocked"],
     ["telegraph.co.uk", searchForClass, "premium-paywall"],
-    ["investors.com", searchForClass, "access_level-restricted"]
+    ["investors.com", searchForClass, "access_level-restricted"],
+    ["irishtimes.com", searchForClass, "article_bodycopy_sample"],
+    ["valor.com.br", searchForId, "block-valor_cadastro-2"],
+    ["kyivpost.com", searchForClass, "exclusive-content"],
+    ["haaretz.com", searchForClass, "tadvert"],
+    ["lefigaro.fr", searchForClass, "fig-premium-paywall"],
+    ["folha.uol.com.br", searchForClass, "teaser-warning", 2],
+    ["ekonom.ihned.cz", searchForClass, "hard-paywall-ekonom"]
 ];
 
 checkForPaidContent(document.location.host, sites);
@@ -29,8 +37,13 @@ function checkForPaidContent(host, sites) {
 
     if (!siteMatchResult) return;
 
+    var timeoutMode = (siteMatch[3]) ? siteMatch[3]*1000 : 0;
+
     console.log(siteMatch);
-    siteMatch[1](siteMatch[2]);
+
+    setTimeout(function () {
+        siteMatch[1](siteMatch[2]);
+    }, timeoutMode);
 }
 
 function searchForClass(className) {
