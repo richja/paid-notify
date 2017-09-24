@@ -20,7 +20,26 @@ var sites = [
     ["haaretz.com", searchForClass, "tadvert"],
     ["lefigaro.fr", searchForClass, "fig-premium-paywall"],
     ["folha.uol.com.br", searchForClass, "teaser-warning", 2],
-    ["ekonom.ihned.cz", searchForClass, "hard-paywall-ekonom"]
+    ["ekonom.ihned.cz", searchForClass, "hard-paywall-ekonom"],
+    ["lexpress.fr", searchForClass, "premium_content"],
+    ["mediapart.fr", searchForClass, "content-restricted"],
+    ["pressandjournal.co.uk", searchForClass, "pandj_mpp_block_meter"],
+    ["polityka.pl", searchForClass, "paid-article-popup"],
+    ["newsweek.pl", searchForId, "PAYWALL_ARTICLE_BANNER"],
+    ["gazetapolska.pl", searchForClass, "kiosk"],
+    ["gloswielkopolski.pl", searchForId, "smsPaymentRegion"],
+    ["kurierlubelski.pl", searchForId, "smsPaymentRegion"],
+    ["dziennikzachodni.pl", searchForId, "smsPaymentRegion"],
+    ["dzienniklodzki.pl", searchForId, "smsPaymentRegion"],
+    ["dziennikbaltycki.pl", searchForId, "smsPaymentRegion"],
+    ["gs24.pl", searchForId, "smsPaymentRegion"],
+    ["pomorska.pl", searchForId, "smsPaymentRegion"],
+    ["gazetalubuska.pl", searchForId, "smsPaymentRegion"],
+    ["expressilustrowany.pl", searchForId, "smsPaymentRegion"],
+    ["plus.echodnia.eu", searchForId, "smsPaymentRegion"],
+    ["pb.pl", searchForClass, "npb-promo-box"],
+    ["gazetaprawna.pl", searchForId, "smsGateStep0"],
+    ["wyborcza.pl", searchForId, "p_lock_header"]
 ];
 
 checkForPaidContent(document.location.host, sites);
