@@ -39,7 +39,14 @@ var sites = [
     ["plus.echodnia.eu", searchForId, "smsPaymentRegion"],
     ["pb.pl", searchForClass, "npb-promo-box"],
     ["gazetaprawna.pl", searchForId, "smsGateStep0"],
-    ["wyborcza.pl", searchForId, "p_lock_header"]
+    ["wyborcza.pl", searchForId, "p_lock_header"],
+    ["espresso.repubblica.it", searchForId, "iframepay"],
+    ["zeit.de", searchForClass, "gate--register"],
+    ["spiegel.de", searchForId, "laterpay-replacement"],
+    ["thueringer-allgemeine.de", searchForClass, "pc-pricing"],
+    ["haz.de", searchForId, "pda-pc-article-paywall"],
+    ["freiepresse.de", searchForId, "paywall-info"],
+    ["handelsblatt.com", searchForClass, "vhb-paywall-wrapper"]
 ];
 
 checkForPaidContent(document.location.host, sites);
