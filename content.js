@@ -46,7 +46,19 @@ var sites = [
     ["thueringer-allgemeine.de", searchForClass, "pc-pricing"],
     ["haz.de", searchForId, "pda-pc-article-paywall"],
     ["freiepresse.de", searchForId, "paywall-info"],
-    ["handelsblatt.com", searchForClass, "vhb-paywall-wrapper"]
+    ["handelsblatt.com", searchForClass, "vhb-paywall-wrapper"],
+    ["plus.faz.net", searchForClass, "red-carpet-container"],
+    ["lepoint.fr", searchForClass, "freemium-tronque"],
+    ["nouvelobs.com", searchForClass, "abonnez-vous"],
+    ["sudouest.fr", searchForClass, "article-premium-footer"],
+    ["ouest-france.fr", searchForId, "monet-info"],
+    ["letelegramme.fr", searchForId, "paywall-in-post"],
+    ["ledauphine.com", searchForClass, "flagPaid"],
+    ["lavoixdunord.fr", searchForClass, "gr-message-paywall"],
+    ["dna.fr", searchForClass, "zoneSecure"],
+    ["lesechos.fr", searchForClass, "block-paywall-article"],
+    ["lemonde.fr", searchForId, "teaser_article"],
+    ["humanite.fr", searchForClass, "field-name-block-non-abonnes"]
 ];
 
 checkForPaidContent(document.location.host, sites);
