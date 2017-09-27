@@ -58,7 +58,17 @@ var sites = [
     ["dna.fr", searchForClass, "zoneSecure"],
     ["lesechos.fr", searchForClass, "block-paywall-article"],
     ["lemonde.fr", searchForId, "teaser_article"],
-    ["humanite.fr", searchForClass, "field-name-block-non-abonnes"]
+    ["humanite.fr", searchForClass, "field-name-block-non-abonnes"],
+    ["ts.fi", searchForClass, "tsv3-c-common-article__paywall-landingbox"],
+    ["savonsanomat.fi", searchForSelector, "body.article--premium"],
+    ["karjalainen.fi", searchForId, "login_box"],
+    ["ilkka.fi", searchForClass, "article__read-all__wrapper"],
+    ["hbl.fi", searchForId, "loginwall-info"],
+    ["ess.fi", searchForClass, "art-paid"],
+    ["summa.talentum.fi", searchForId, "buy-content-region", 3],
+    ["plus.iltalehti.fi", searchForClass, "promo-area__inner"],
+    ["is.fi", searchForClass, "article-paywall"],
+    ["hs.fi", searchForClass, "show-paywall"]
 ];
 
 checkForPaidContent(document.location.host, sites);
