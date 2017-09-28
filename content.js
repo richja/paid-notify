@@ -68,7 +68,30 @@ var sites = [
     ["summa.talentum.fi", searchForId, "buy-content-region", 3],
     ["plus.iltalehti.fi", searchForClass, "promo-area__inner"],
     ["is.fi", searchForClass, "article-paywall"],
-    ["hs.fi", searchForClass, "show-paywall"]
+    ["hs.fi", searchForClass, "show-paywall"],
+    ["fvn.no", searchForClass, "widget-fasten-salesposters"],
+    ["krsby.no", searchForClass, "widget-salesposter"],
+    ["aftenposten.no", searchForClass, "widget-fasten-salesposters"],
+    ["dagbladet.no", searchForClass, "paywall"],
+    ["pluss.vg.no", searchForId, "paywall"],
+    ["bt.no", searchForClass, "widget-fasten-salesposters-bt"],
+    ["foreignaffairs.com", searchForClass, "paywall-prompt"],
+    ["content.time.com", searchForId, "subscribe-teaser"],
+    ["barrons.com", searchForClass, "barrons-snippet-login"],
+    ["politiken.dk", searchForClass, "stopsign__article"],
+    ["information.dk", searchForId, "mini-panel-non_subscriber_ad_article"],
+    ["kristeligt-dagblad.dk", searchForClass, "paywall"],
+    ["jyllands-posten.dk", searchForClass, "artViewLock"],
+    ["mediawatch.dk", searchForClass, "lockedArticleContainer"],
+    ["energiwatch.dk", searchForClass, "lockedArticleContainer"],
+    ["fodevarewatch.dk", searchForClass, "lockedArticleContainer"],
+    ["medwatch.dk", searchForClass, "lockedArticleContainer"],
+    ["finanswatch.dk", searchForClass, "lockedArticleContainer"],
+    ["ejendomswatch.dk", searchForClass, "lockedArticleContainer"],
+    ["shippingwatch.dk", searchForClass, "lockedArticleContainer"],
+    ["finans.dk", searchForClass, "artViewLock"],
+    ["business.dk", searchForClass, "paywall-hard"],
+    ["b.dk", searchForClass, "paywall-hard"]
 ];
 
 checkForPaidContent(document.location.host, sites);
