@@ -1,6 +1,6 @@
 .ext-paid-notify {
     box-sizing: border-box;
-    line-height: normal;
+    line-height: normal !important;
     position: absolute;
     left: 0;
     top: 0;
@@ -9,8 +9,8 @@
     background-color: #EF6644;
     border-bottom: 2px solid #AF4B31;
     padding: 20px;
-    font-size: 24px;
-    color: #fff;
+    font-size: 24px !important;
+    color: #fff !important;
     transition: top 1s ease-out;
 }
 
@@ -21,6 +21,8 @@
     font-size: 1.5em;
     background-color: #AF4B31;
     cursor: pointer;
+    color: inherit;
+    line-height: inherit;
 }
 
 .ext-paid-notify-close-btn:hover {
