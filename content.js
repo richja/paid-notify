@@ -21,6 +21,7 @@ var sites = [
     ["lefigaro.fr", searchForClass, "fig-premium-paywall"],
     ["folha.uol.com.br", searchForClass, "teaser-warning", 2],
     ["ekonom.ihned.cz", searchForClass, "hard-paywall-ekonom"],
+    ["archiv.ihned.cz", searchForClass, "article-header-pw-info"],
     ["lexpress.fr", searchForClass, "premium_content"],
     ["mediapart.fr", searchForClass, "content-restricted"],
     ["pressandjournal.co.uk", searchForClass, "pandj_mpp_block_meter"],

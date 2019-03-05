@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.2",
+  "version": "0.3.3",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
   "author": "Jan Richter",
@@ -38,6 +38,7 @@
         "*://*.lefigaro.fr/*",
         "*://*.folha.uol.com.br/*",
         "*://*.ekonom.ihned.cz/*",
+        "*://*.archiv.ihned.cz/*",
         "*://*.lexpress.fr/*",
         "*://*.mediapart.fr/*",
         "*://*.pressandjournal.co.uk/*",
