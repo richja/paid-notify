@@ -20,7 +20,7 @@ gulp.task('uglify', function () {
 
 // move rest of files to dist dir
 gulp.task('move', function () {
-    return gulp.src(files)
+    return gulp.src(files, { base: './' })
         .pipe(gulp.dest('dist'));
 });
 
