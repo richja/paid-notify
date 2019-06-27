@@ -1,0 +1,25 @@
+{
+  "name": "paid-notify",
+  "version": "1.0.0",
+  "description": "Addon to browsers to notify you when you are about to read just a snippet of an paid article with paid content",
+  "main": "content.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richja/paid-notify.git"
+  },
+  "author": "Jan Richter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richja/paid-notify/issues"
+  },
+  "homepage": "https://github.com/richja/paid-notify#readme"
+}

@@ -25,10 +25,10 @@ gulp.task('move', function () {
 });
 
 // zip them all
-gulp.task('zip', ['uglify', 'move'], function () {
+gulp.task('zip', gulp.series('uglify', 'move'), function () {
     gulp.src('dist/**/*.*')
         .pipe(zip('paid-notify.zip'))
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['uglify', 'move', 'zip']);
+gulp.task('default', gulp.series('zip'));
