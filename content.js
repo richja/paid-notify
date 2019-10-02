@@ -112,8 +112,6 @@ function checkForPaidContent(host, sites) {
 
     var timeoutMode = (siteMatch[3]) ? siteMatch[3]*1000 : 0;
 
-    console.log(siteMatch);
-
     setTimeout(function () {
         siteMatch[1](siteMatch[2]);
     }, timeoutMode);
