@@ -93,7 +93,9 @@ var sites = [
     ["finans.dk", searchForClass, "artViewLock"],
     ["business.dk", searchForClass, "paywall-hard"],
     ["b.dk", searchForClass, "paywall-hard"],
-    ["idnes.cz", searchForId, "paywall"]
+    ["idnes.cz", searchForId, "paywall"],
+    ["denikn.cz", searchForId, "e_lock__hard"],
+    ["dennikn.sk", searchForId, "e_lock__hard"]
 ];
 
 checkForPaidContent(document.location.host, sites);
