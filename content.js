@@ -10,7 +10,7 @@ var sites = [
     ["dtest.cz", searchForClass, "login-buy-box"],
     ["psychologie.cz", searchForClass, "about-pay-info"],
     ["montyrich.cz", searchForId, "component-news-premium"],
-    ["echo24.cz", searchForClass, "lockBlock"],
+    ["echo24.cz", searchForClass, "poutak-predplatitele"],
     ["067.cz", searchForClass, "blocked"],
     ["telegraph.co.uk", searchForClass, "premium-paywall"],
     ["investors.com", searchForClass, "access_level-restricted"],
