@@ -11,24 +11,43 @@ var files = [
     '_locales/**/*.*'
 ];
 
+var jsFiles = [
+    'content.js'
+];
+
+var destPath = 'dist';
+
 // compress js files
 gulp.task('uglify', function () {
     return gulp.src('content.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest(destPath));
 });
 
 // move rest of files to dist dir
 gulp.task('move', function () {
     return gulp.src(files, { base: './' })
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest(destPath));
+});
+
+gulp.task('moveJs', function () {
+    return gulp.src(jsFiles, { base: './' })
+        .pipe(gulp.dest(destPath));
 });
 
 // zip them all
-gulp.task('zip', function () {
-    return gulp.src('dist/**/*.*')
-        .pipe(zip('paid-notify.zip'))
+gulp.task('zip-chrome', function () {
+    return gulp.src(destPath + '/**/*.*')
+        .pipe(zip('paid-notify-chrome.zip'))
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', gulp.series('uglify', 'move', 'zip'));
+gulp.task('zip-firefox', function () {
+    return gulp.src(destPath + '/**/*.*')
+        .pipe(zip('paid-notify-firefox.zip'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('chrome', gulp.series('uglify', 'move', 'zip-chrome'));
+gulp.task('firefox', gulp.series('moveJs', 'move', 'zip-firefox'));
+gulp.task('default', gulp.series('chrome', 'firefox'));

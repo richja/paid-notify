@@ -17,7 +17,8 @@ See [this commit](https://github.com/richja/paid-notify/commit/94c5840020e676cad
 
 ### Using Gulp tasks
 1. Run `npm install` to get Gulp ready
-2. Run `gulp` to pack and minify all the files to a zipped folder. Ready to be uploaded.
+2. Run `gulp` to pack and minify all the files to a zipped folder
+3. Gulp will generate versions for both Chrome and Firefox
 
 Having issues running Gulp from command line?  
 Run `npm i -g gulp-cli` and try again
