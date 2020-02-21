@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.3.71",
+  "version": "0.3.72",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
   "author": "Jan Richter",
@@ -114,7 +114,8 @@
         "*://*.idnes.cz/*",
         "*://*.denikn.cz/*",
         "*://*.dennikn.sk/*",
-        "*://*.lvz.de/*"
+        "*://*.lvz.de/*",
+        "*://*.denik.cz/*"
       ],
       "css": [
         "style.css"

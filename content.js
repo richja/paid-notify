@@ -96,7 +96,8 @@ var sites = [
     ["idnes.cz", searchForId, "paywall"],
     ["denikn.cz", searchForId, "e_lock__hard"],
     ["dennikn.sk", searchForId, "e_lock__hard"],
-    ["lvz.de", searchForClass, "pdb-article-paidcontent-registration-content", 2]
+    ["lvz.de", searchForClass, "pdb-article-paidcontent-registration-content", 2],
+    ["denik.cz", searchForClass, "paywall-article-chapter", 2]
 ];
 
 checkForPaidContent(document.location.host, sites);
