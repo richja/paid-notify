@@ -97,7 +97,8 @@ var sites = [
     ["denikn.cz", searchForId, "e_lock__hard"],
     ["dennikn.sk", searchForId, "e_lock__hard"],
     ["lvz.de", searchForClass, "pdb-article-paidcontent-registration-content", 2],
-    ["denik.cz", searchForClass, "paywall-article-chapter", 2]
+    ["denik.cz", searchForClass, "paywall-article-chapter", 2],
+    ["independent.ie", searchForId, "flip-pay"],
 ];
 
 checkForPaidContent(document.location.host, sites);
