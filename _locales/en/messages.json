@@ -4,7 +4,7 @@
     "description": "The title of the application, displayed in the web store."
   },
   "extDesc": {
-    "message": "Get notified when you are about to read just a snippet of an paid article with paid content. No more surprises.",
+    "message": "Get notified when you are about to read just a snippet of paid article with paid content. No more surprises.",
     "description":"The description of the application, displayed in the web store."
   },
   "extMessage": {
