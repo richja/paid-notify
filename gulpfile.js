@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     zip = require('gulp-zip');
 
 var files = [
@@ -20,7 +20,7 @@ var destPath = 'dist';
 // compress js files
 gulp.task('uglify', function () {
     return gulp.src('content.js')
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(gulp.dest(destPath));
 });
 
