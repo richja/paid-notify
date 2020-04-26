@@ -24,6 +24,11 @@ function checkForPaidContent(host, sites) {
     const timeoutMode = (siteMatch[3]) ? siteMatch[3] * 1000 : 0;
 
     setTimeout(() => {
+        if (typeof window[siteMatch[1]] !== 'function') {
+            console.error(`Paid Notify extension error: function "${siteMatch[1]}" doesn't exist`);
+            return;
+        }
+
         window[siteMatch[1]](siteMatch[2]);
     }, timeoutMode);
 }
