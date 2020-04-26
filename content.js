@@ -1,4 +1,4 @@
-var sites = [
+let sites = [
     //hostname, function to call, argument for function, [delay in seconds]
     ["digizone.cz", searchForClass, "paymentRequest"],
     ["e15.cz", searchForClass, "subscription-box"],
@@ -107,8 +107,8 @@ checkForPaidContent(document.location.host, sites);
 
 function checkForPaidContent(host, sites) {
 
-    var siteMatch  = null;
-    var siteMatchResult = sites.some(function(site){
+    let siteMatch  = null;
+    const siteMatchResult = sites.some((site) => {
         if (host.indexOf(site[0]) !==-1) {
             siteMatch = site;
             return site;
@@ -117,9 +117,9 @@ function checkForPaidContent(host, sites) {
 
     if (!siteMatchResult) return;
 
-    var timeoutMode = (siteMatch[3]) ? siteMatch[3]*1000 : 0;
+    const timeoutMode = (siteMatch[3]) ? siteMatch[3] * 1000 : 0;
 
-    setTimeout(function () {
+    setTimeout(() => {
         siteMatch[1](siteMatch[2]);
     }, timeoutMode);
 }
@@ -143,20 +143,20 @@ function searchForSelector(query) {
 }
 
 function showNotification() {
-    var notifyDiv = document.createElement("div");
+    const notifyDiv = document.createElement("div");
     notifyDiv.innerHTML = chrome.i18n.getMessage("extMessage") + "<div class='ext-paid-notify-close-btn'>&times;</div>";
     notifyDiv.className = "ext-paid-notify";
     document.body.appendChild(notifyDiv);
 
-    var notifyDivBtn = document.getElementsByClassName("ext-paid-notify-close-btn");
-    notifyDivBtn[0].addEventListener("click", function () {
+    const notifyDivBtn = document.getElementsByClassName("ext-paid-notify-close-btn");
+    notifyDivBtn[0].addEventListener("click",  () => {
         closeNotification(notifyDiv);
     });
 }
 
 function closeNotification(targetDiv) {
     targetDiv.style.top = "-100px";
-    setTimeout(function () {
+    setTimeout( () => {
         targetDiv.style.display = "none";
         targetDiv.remove()
     }, 1000);
