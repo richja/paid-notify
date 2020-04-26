@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.3.74",
+  "version": "0.3.75",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
   "author": "Jan Richter",
@@ -117,7 +117,8 @@
         "*://*.lvz.de/*",
         "*://*.denik.cz/*",
         "*://*.independent.ie/*",
-        "*://*.zive.cz/*"
+        "*://*.zive.cz/*",
+        "*://*.firstclass.cz/*"
       ],
       "css": [
         "style.css"

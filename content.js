@@ -100,6 +100,7 @@ var sites = [
     ["denik.cz", searchForClass, "paywall-article-chapter", 2],
     ["independent.ie", searchForId, "flip-pay"],
     ["zive.cz", searchForClass, "premium-info"],
+    ["firstclass.cz", searchForClass, "membership-content access-restricted"],
 ];
 
 checkForPaidContent(document.location.host, sites);
