@@ -142,14 +142,6 @@ function searchForSelector(query) {
     }
 }
 
-function closeNotification(targetDiv) {
-    targetDiv.style.top = "-100px";
-    setTimeout(function () {
-        targetDiv.style.display = "none";
-        targetDiv.remove()
-    }, 1000);
-}
-
 function showNotification() {
     var notifyDiv = document.createElement("div");
     notifyDiv.innerHTML = chrome.i18n.getMessage("extMessage") + "<div class='ext-paid-notify-close-btn'>&times;</div>";
@@ -160,4 +152,12 @@ function showNotification() {
     notifyDivBtn[0].addEventListener("click", function () {
         closeNotification(notifyDiv);
     });
+}
+
+function closeNotification(targetDiv) {
+    targetDiv.style.top = "-100px";
+    setTimeout(function () {
+        targetDiv.style.display = "none";
+        targetDiv.remove()
+    }, 1000);
 }
