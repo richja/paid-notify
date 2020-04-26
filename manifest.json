@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.3.75",
+  "version": "0.3.76",
   "description": "__MSG_extDesc__",
   "default_locale": "en",
   "author": "Jan Richter",
@@ -124,5 +124,8 @@
         "style.css"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "sites.json"
   ]
 }
