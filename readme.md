@@ -8,7 +8,7 @@ Any feedback is more than welcomed, same as reporting websites you are missing h
 
 ## Development
 ### Adding new website
-1. Add to `sites` directory in `content.js`
+1. Add record to `sites.json` (arguments as follows: website hostname, function to call, argument for called function, [delay on called function, 0 by default])
 2. Add domain to matches in manifest
 3. Bump version in manifest
 4. Test locally and create a pull request
