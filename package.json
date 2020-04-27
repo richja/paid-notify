@@ -5,14 +5,15 @@
   "main": "content.js",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "^4.4.1",
-    "cypress-browser-extension-plugin": "^0.1.0",
     "gulp": "^4.0.2",
     "gulp-terser": "^1.2.0",
-    "gulp-zip": "^5.0.1"
+    "gulp-zip": "^5.0.1",
+    "jest": "^25.4.0",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^3.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
