@@ -1,6 +1,6 @@
 # Paid Content Alert
 
-**Addon to browsers to notify you when you are about to read just a snippet of an paid article with paid content.**
+**Browser addon to notify you when you are about to read just a snippet of an article with paid content.**
 
 Available for [Google Chrome](https://chrome.google.com/webstore/detail/paid-content-alert/hnagmphbnaloflgnhkkbniknbpmlackl) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/paid-content-alert/).
 
