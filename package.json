@@ -8,9 +8,9 @@
     "gulp": "^4.0.2",
     "gulp-terser": "^1.2.0",
     "gulp-zip": "^5.0.1",
-    "jest": "^25.4.0",
+    "jest": "^25.5.4",
     "jest-puppeteer": "^4.4.0",
-    "puppeteer": "^3.0.1"
+    "puppeteer": "^3.0.4"
   },
   "scripts": {
     "test": "jest"
