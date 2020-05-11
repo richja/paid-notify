@@ -1,6 +1,8 @@
+const Loader = require('./Loader.js');
+
 describe('Paid Notify Extension tests', () => {
     it('Paid article notification is shown', async () => {
-        const response = await page.goto('https://denikn.cz/354496/babisem-kritizovany-namestek-dostal-po-rezignaci-pres-milion-aby-neodesel-ke-konkurenci-za-sedm-tydnu-se-na-urad-vratil/?ref=tit', {waitUntil: 'networkidle2'});
+        const response = await page.goto('https://www.berlingske.dk/samfund/professor-slaaende-andel-af-coronadoedsfald-i-hovedstaden-og-sjaelland-kan', {waitUntil: 'networkidle2'});
         expect(response.ok()).toBeTruthy();
 
         try {
@@ -14,4 +16,11 @@ describe('Paid Notify Extension tests', () => {
             fail("Extension notification was not rendered");
         }
     })
+
+    it.only('Sites are loaded into array', () => {
+        return Loader.getSites().then(data => {
+            expect(Array.isArray(data)).toBeTruthy();
+            expect(data.length).toBeGreaterThan(100);
+        });
+    });
 })

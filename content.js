@@ -1,13 +1,11 @@
-const sitesFile = chrome.runtime.getURL("sites.json");
-
-fetch(sitesFile)
-    .then((response) => {
-        return response.json();
-    })
-    .then((sitesObj) => {
-        console.log(sitesObj);
-        checkForPaidContent(document.location.host, sitesObj.sites);
+(async () => {
+    const src = chrome.runtime.getURL("./Loader.js");
+    const Loader = await import(src);
+    Loader.getSites().then(sites => {
+        checkForPaidContent(document.location.host, sites);
     });
+
+})();
 
 function checkForPaidContent(host, sites) {
 

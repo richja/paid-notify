@@ -110,7 +110,7 @@
         "*://*.shippingwatch.dk/*",
         "*://*.finans.dk/*",
         "*://*.business.dk/*",
-        "*://*.b.dk/*",
+        "*://*.berlingske.dk/*",
         "*://*.idnes.cz/*",
         "*://*.denikn.cz/*",
         "*://*.dennikn.sk/*",
@@ -126,6 +126,7 @@
     }
   ],
   "web_accessible_resources": [
-    "sites.json"
+    "sites.json",
+    "Loader.js"
   ]
 }
