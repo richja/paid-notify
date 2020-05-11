@@ -12,7 +12,8 @@ var files = [
 ];
 
 var jsFiles = [
-    'content.js'
+    'content.js',
+    'Loader.js',
 ];
 
 var destPath = 'dist';

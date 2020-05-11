@@ -4,7 +4,6 @@
     Loader.getSites().then(sites => {
         checkForPaidContent(document.location.host, sites);
     });
-
 })();
 
 function checkForPaidContent(host, sites) {
