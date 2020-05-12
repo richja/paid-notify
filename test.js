@@ -1,9 +1,12 @@
 const Loader = require('./Loader.js');
 const puppeteer = require('puppeteer');
 
-describe('Paid Notify Extension tests', () => {
+let page;
+let browser;
 
-    it('Paid article notification should shown', async () => {
+describe('Notification tests', () => {
+
+    beforeAll(async (done) => {
         const args = {
             dumpio: true,
             headless: false,
@@ -21,8 +24,20 @@ describe('Paid Notify Extension tests', () => {
             ],
             devtools: false,
         };
-        const browser = await puppeteer.launch(args);
-        const page = await browser.newPage();
+        browser = await puppeteer.launch(args);
+        page = await browser.newPage();
+
+        done();
+    });
+
+    afterAll(async (done) => {
+        await browser.close();
+
+        done();
+    });
+
+    it.only('Notification should be rendered', async () => {
+
         const response = await page.goto('https://www.berlingske.dk/samfund/professor-slaaende-andel-af-coronadoedsfald-i-hovedstaden-og-sjaelland-kan', {waitUntil: 'networkidle2'});
 
         expect(response.ok()).toBeTruthy();
@@ -36,8 +51,10 @@ describe('Paid Notify Extension tests', () => {
             visible: true
         });
 
-        await browser.close();
     })
+})
+
+describe('Loader tests', () => {
 
     it('Sites should be loaded as an array', () => {
         return Loader.getSites().then(data => {
