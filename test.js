@@ -36,7 +36,7 @@ describe('Notification tests', () => {
         done();
     });
 
-    it.only('Notification should be rendered', async () => {
+    it('Notification should be rendered', async () => {
 
         const response = await page.goto('https://www.berlingske.dk/samfund/professor-slaaende-andel-af-coronadoedsfald-i-hovedstaden-og-sjaelland-kan', {waitUntil: 'networkidle2'});
 
@@ -51,8 +51,18 @@ describe('Notification tests', () => {
             visible: true
         });
 
-    })
-})
+    });
+
+    it('Notification should NOT be rendered', async () => {
+
+        const response = await page.goto('https://www.berlingske.dk/samfund/dronning-margrethe-ansaetter-ny-hofdame', {waitUntil: 'networkidle2'});
+
+        expect(response.ok()).toBeTruthy();
+
+        await expect(page).not.toMatchElement('.ext-paid-notify');
+        await expect(page).not.toMatchElement('.paywall-hard');
+    });
+});
 
 describe('Loader tests', () => {
 
@@ -62,4 +72,4 @@ describe('Loader tests', () => {
             expect(data.length).toBeGreaterThan(100);
         });
     });
-})
+});
