@@ -8,7 +8,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - puppeteer/with-cache:
+      - puppeteer:
           steps:
             - run: npm install
 #            - run:
