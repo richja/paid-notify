@@ -11,8 +11,8 @@ describe('Notification tests', () => {
             dumpio: true,
             headless: false,
             args: [
-                '--disable-extensions-except=C:/xampp/htdocs/projects/paid_notify/dist',
-                '--load-extension=C:/xampp/htdocs/projects/paid_notify/dist',
+                `--disable-extensions-except=${__dirname}/dist`,
+                `--load-extension=${__dirname}/dist`,
                 '--disable-features=AudioServiceOutOfProcess',
                 '--no-first-run',
                 '--disable-gpu',
