@@ -49,6 +49,7 @@ gulp.task('zip-firefox', function () {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('dist', gulp.series('uglify', 'move'));
 gulp.task('chrome', gulp.series('uglify', 'move', 'zip-chrome'));
 gulp.task('firefox', gulp.series('moveJs', 'move', 'zip-firefox'));
 gulp.task('default', gulp.series('chrome', 'firefox'));
