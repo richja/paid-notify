@@ -62,12 +62,44 @@ describe('Notification tests', () => {
         await expect(page).not.toMatchElement('.ext-paid-notify');
         await expect(page).not.toMatchElement('.paywall-hard');
     });
+
+    it('Regression: All notifications should be rendered', async () => {
+
+        let errors = [];
+
+        await Loader.getSites().then(async data => {
+
+            const sites = data.filter(record => record.length > 4);
+
+            for (let i = 0; i < sites.length; i++) {
+                const site = sites[i].length > 5 ? sites[i][4] : sites[i][3]
+
+                try {
+                    const response = await page.goto(site, {waitUntil: 'networkidle2'});
+
+                    expect(response.ok()).toBeTruthy();
+
+                    await page.waitForSelector('.ext-paid-notify', {
+                        timeout: 2000,
+                        visible: true
+                    });
+                }
+                catch (e) {
+                    errors.push(`Error for ${site}`, e)
+                }
+
+                if (errors.length) {
+                    fail(errors);
+                }
+            }
+        });
+    });
 });
 
 describe('Loader tests', () => {
-
     it('Sites should be loaded as an array', () => {
-        return Loader.getSites().then(data => {
+
+        Loader.getSites().then(data => {
             expect(Array.isArray(data)).toBeTruthy();
             expect(data.length).toBeGreaterThan(100);
         });
