@@ -1,19 +1,16 @@
 version: 2.1
 orbs:
-#  node: circleci/node@2.1.0
-  puppeteer: threetreeslight/puppeteer@0.1.2
+  node: circleci/node@2.1.0
 jobs:
   build-and-test:
-#    executor:
-#      name: puppeteer
-#    name: node/default
+    executor:
+      name: node/default
     environment:
       NODE_ENV: development
     steps:
       - checkout
-#      - node/install-packages
-      - run: npm install
-      - puppeteer/install
+      - node/install-packages
+#      - run: npm install
       - run:
           name: Install Headless Chrome dependencies
           command: |
@@ -29,7 +26,3 @@ workflows:
   build-and-test:
     jobs:
       - build-and-test:
-          filters:
-            branches:
-              only:
-                - /.*/
