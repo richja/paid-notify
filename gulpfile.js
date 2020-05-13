@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     zip = require('gulp-zip');
 
 var files = [
@@ -12,7 +12,8 @@ var files = [
 ];
 
 var jsFiles = [
-    'content.js'
+    'content.js',
+    'Loader.js',
 ];
 
 var destPath = 'dist';
@@ -20,7 +21,7 @@ var destPath = 'dist';
 // compress js files
 gulp.task('uglify', function () {
     return gulp.src('content.js')
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(gulp.dest(destPath));
 });
 
@@ -48,6 +49,7 @@ gulp.task('zip-firefox', function () {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('dist', gulp.series('uglify', 'move'));
 gulp.task('chrome', gulp.series('uglify', 'move', 'zip-chrome'));
 gulp.task('firefox', gulp.series('moveJs', 'move', 'zip-firefox'));
 gulp.task('default', gulp.series('chrome', 'firefox'));

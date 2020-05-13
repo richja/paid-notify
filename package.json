@@ -5,12 +5,19 @@
   "main": "content.js",
   "dependencies": {},
   "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "babel-jest": "^26.0.1",
+    "expect-puppeteer": "^4.4.0",
     "gulp": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "gulp-zip": "^5.0.0"
+    "gulp-terser": "^1.2.0",
+    "gulp-zip": "^5.0.1",
+    "jest": "^25.5.4",
+    "jest-puppeteer": "^4.4.0",
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^3.0.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
