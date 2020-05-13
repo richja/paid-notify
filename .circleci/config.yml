@@ -12,7 +12,7 @@ jobs:
       - checkout
 #      - node/install-packages
       - run: npm install
-      - install
+      - puppeteer/install
       - run:
           name: Install Headless Chrome dependencies
           command: |
