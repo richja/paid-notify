@@ -4,8 +4,9 @@ orbs:
   puppeteer: threetreeslight/puppeteer@0.1.2
 jobs:
   build-and-test:
-    executor:
-      name: node/default
+#    executor:
+    name: puppeteer
+#    name: node/default
     environment:
       NODE_ENV: development
     steps:
