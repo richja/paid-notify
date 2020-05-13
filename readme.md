@@ -8,12 +8,20 @@ Any feedback is more than welcomed, same as reporting websites you are missing h
 
 ## Development
 ### Adding new website
-1. Add record to `sites.json` (arguments as follows: website hostname, function to call, argument for called function, [delay on called function, 0 by default])
-2. Add domain to matches in manifest
+1. Add record to `sites.json`
+2. Add a domain to matches in manifest
 3. Bump version in manifest
 4. Test locally and create a pull request
 
 See [this commit](https://github.com/richja/paid-notify/commit/94c5840020e676cad1e8991aeda69ba078f58a17) for an example.
+
+Arguments for a record in `sites.json`:
+- website hostname
+- function to call
+- argument for called function
+- [delay on called function, 0 by default]
+- [sample url where notification should be visible]
+- [sample url where notification should NOT be visible]))
 
 ### Using Gulp tasks
 1. Run `npm install` to get Gulp ready
@@ -22,3 +30,7 @@ See [this commit](https://github.com/richja/paid-notify/commit/94c5840020e676cad
 
 Having issues running Gulp from command line?  
 Run `npm i -g gulp-cli` and try again
+
+### Tests
+Run `npm test` to run all tests  
+(You may need to run `gulp dist` first)
