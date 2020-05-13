@@ -10,7 +10,7 @@ describe('Notification tests', () => {
     beforeAll(async (done) => {
         const extensionLocation = `${__dirname}/dist`;
         if (!fs.existsSync(extensionLocation)) {
-            throw Error (`Extension cannot be located at "${extensionLocation}", run gulp first`);
+            throw Error (`Extension cannot be located at "${extensionLocation}", run 'gulp dist' first`);
         }
 
         const args = {
