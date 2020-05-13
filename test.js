@@ -1,5 +1,6 @@
 const Loader = require('./Loader.js');
 const puppeteer = require('puppeteer');
+const fs = require("fs");
 
 let page;
 let browser;
@@ -7,12 +8,17 @@ let browser;
 describe('Notification tests', () => {
 
     beforeAll(async (done) => {
+        const extensionLocation = `${__dirname}/dist`;
+        if (!fs.existsSync(extensionLocation)) {
+            throw Error (`Extension cannot be located at "${extensionLocation}", run gulp first`);
+        }
+
         const args = {
             dumpio: true,
             headless: false,
             args: [
-                `--disable-extensions-except=${__dirname}/dist`,
-                `--load-extension=${__dirname}/dist`,
+                `--disable-extensions-except=${extensionLocation}`,
+                `--load-extension=${extensionLocation}`,
                 '--disable-features=AudioServiceOutOfProcess',
                 '--no-first-run',
                 '--disable-gpu',
