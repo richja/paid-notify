@@ -9,7 +9,7 @@ jobs:
       NODE_ENV: development
     steps:
       - checkout
-      - node/with-cache:
+      - node/install-packages:
           steps:
             - run: npm install
             - run:
