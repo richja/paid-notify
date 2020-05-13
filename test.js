@@ -1,5 +1,5 @@
 const Loader = require('./Loader.js');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const fs = require("fs");
 
 let page;
