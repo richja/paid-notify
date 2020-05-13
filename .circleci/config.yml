@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: circleci/node:10.0
+      - image: circleci/node:10.0-browsers
     environment:
       NODE_ENV: development
     steps:
@@ -19,7 +19,7 @@ jobs:
           command: |
             sudo apt-get update -y
       - run:
-          name: Update
+          name: Upgrade
           command: |
             sudo apt-get upgrade -y
       - run:
