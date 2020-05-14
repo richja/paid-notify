@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: circleci/node:10.0-browsers
+      - image: buildkite/puppeteer
     environment:
       NODE_ENV: development
     steps:
