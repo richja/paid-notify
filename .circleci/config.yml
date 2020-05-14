@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: buildkite/puppeteer:3.0.1
+      - image: buildkite/puppeteer:v3.0.1
     environment:
       NODE_ENV: development
     steps:
