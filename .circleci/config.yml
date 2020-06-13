@@ -36,6 +36,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}-{{ arch }}
       - run: ./node_modules/.bin/gulp dist
       - run: npm test
+      - store_test_results:
+          path: test-results
 workflows:
   build-and-test:
     jobs:
