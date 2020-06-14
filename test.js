@@ -1,5 +1,6 @@
 const Loader = require('./Loader.js');
 const puppeteer = require('puppeteer');
+const expectPuppeteer = require('expect-puppeteer');
 const fs = require("fs");
 
 let page;
@@ -65,8 +66,8 @@ describe('Notification tests', () => {
 
         expect(response.ok()).toBeTruthy();
 
-        await expect(page).not.toMatchElement('.ext-paid-notify');
-        await expect(page).not.toMatchElement('.paywall-hard');
+        await expectPuppeteer(page).not.toMatchElement('.ext-paid-notify');
+        await expectPuppeteer(page).not.toMatchElement('.paywall-hard');
     });
 
     it('Regression: All notifications should be rendered', async () => {
