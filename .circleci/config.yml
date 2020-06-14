@@ -42,8 +42,16 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - build-and-test
+      - build-and-test:
+          test_args: "npm test -- --testNamePattern='^(?!Regression:).*$'"
   run-regression-tests:
+    triggers:
+      - schedule:
+          cron: "0 1 * * 1" # 1AM every Monday
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build-and-test:
           test_args: "npm test -- --testNamePattern=Regression:"
