@@ -55,5 +55,3 @@ workflows:
     jobs:
       - build-and-test:
           test_args: "npm test -- --testNamePattern=Regression:"
-
-
