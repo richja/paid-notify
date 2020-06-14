@@ -1,6 +1,4 @@
 module.exports = {
-  // preset: "jest-puppeteer",
-  verbose: false,
-  testTimeout: 20000,
-  setupFilesAfterEnv: ["expect-puppeteer"]
+    reporters: ["default", ["jest-junit", {outputDirectory: "./test-results"}]],
+    testTimeout: 20000,
 };
