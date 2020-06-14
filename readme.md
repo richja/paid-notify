@@ -1,4 +1,5 @@
 # Paid Content Alert
+[![CircleCI](https://circleci.com/gh/richja/paid-notify.svg?style=svg)](https://circleci.com/gh/richja/paid-notify)
 
 **Browser addon to notify you when you are about to read just a snippet of an article with paid content.**
 
