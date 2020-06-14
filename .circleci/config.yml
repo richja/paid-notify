@@ -1,0 +1,57 @@
+version: 2.1
+jobs:
+  build-and-test:
+    parameters:
+      test_args:
+        type: string
+        default: ""
+    docker:
+      - image: circleci/node:14.4.0-browsers
+    environment:
+      NODE_ENV: development
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+      - run: npm install
+      - run:
+          name: Update
+          command: |
+            sudo apt-get update -y
+      - run:
+          name: Upgrade
+          command: |
+            sudo apt-get upgrade -y
+      - run:
+          name: Install Chrome dependencies
+          command: |
+            sudo apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
+            libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
+            libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
+            libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \
+            ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget --fix-missing
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: ./node_modules/.bin/gulp dist
+      - run: npm test --ci << parameters.test_args >>
+      - store_test_results:
+          path: test-results
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test:
+          test_args: "npm test -- --testNamePattern='^((?!Regression:).)*$'"
+  run-regression-tests:
+    triggers:
+      - schedule:
+          cron: "0 1 * * 1" # 1AM every Monday
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build-and-test:
+          test_args: "npm test -- --testNamePattern=Regression:"

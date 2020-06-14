@@ -20,7 +20,7 @@ var destPath = 'dist';
 
 // compress js files
 gulp.task('uglify', function () {
-    return gulp.src('content.js')
+    return gulp.src(jsFiles)
         .pipe(terser())
         .pipe(gulp.dest(destPath));
 });
