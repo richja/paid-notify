@@ -1,18 +1,19 @@
 version: 2.1
 jobs:
   build-and-test:
+    parameters:
+      test_args:
+        type: string
+        default: ""
     docker:
       - image: circleci/node:14.4.0-browsers
     environment:
       NODE_ENV: development
     steps:
       - checkout
-#      - node/install-packages
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            #- v1-dependencies-
       - run: npm install
       - run:
           name: Update
@@ -35,10 +36,16 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: ./node_modules/.bin/gulp dist
-      - run: npm test --ci
+      - run: npm test --ci << parameters.test_args >>
       - store_test_results:
           path: test-results
 workflows:
   build-and-test:
     jobs:
       - build-and-test
+  run-regression-tests:
+    jobs:
+      - build-and-test:
+          test_args: "npm test -- --testNamePattern=Regression:"
+
+
