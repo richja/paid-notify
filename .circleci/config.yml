@@ -43,7 +43,7 @@ workflows:
   build-and-test:
     jobs:
       - build-and-test:
-          test_args: "npm test -- --testNamePattern='^(?!Regression:).*$'"
+          test_args: "npm test -- --testNamePattern='^((?!Regression:).)*$'"
   run-regression-tests:
     triggers:
       - schedule:
