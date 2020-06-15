@@ -7,8 +7,10 @@
   "devDependencies": {
     "@babel/preset-env": "^7.9.6",
     "babel-jest": "^26.0.1",
+    "del": "^5.1.0",
     "expect-puppeteer": "^4.4.0",
     "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
     "gulp-terser": "^1.2.0",
     "gulp-zip": "^5.0.1",
     "jest": "^25.5.4",

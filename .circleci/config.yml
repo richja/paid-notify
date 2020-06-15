@@ -35,7 +35,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: ./node_modules/.bin/gulp dist
+      - run: ./node_modules/.bin/gulp dist:chrome
       - run: npm test --ci << parameters.test_args >>
       - store_test_results:
           path: test-results

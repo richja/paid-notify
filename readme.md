@@ -34,4 +34,4 @@ Run `npm i -g gulp-cli` and try again
 
 ### Tests
 Run `npm test` to run all tests  
-(You may need to run `gulp dist` first)
+(You may need to run `gulp dist:chrome` first)
