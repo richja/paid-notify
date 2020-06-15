@@ -3,9 +3,10 @@
 
 **Browser addon to notify you when you are about to read just a snippet of an article with paid content.**
 
-Available for [Google Chrome](https://chrome.google.com/webstore/detail/paid-content-alert/hnagmphbnaloflgnhkkbniknbpmlackl) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/paid-content-alert/).
+Available in stores:  
+[![Google Chrome](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/paid-content-alert/hnagmphbnaloflgnhkkbniknbpmlackl) [![Firefox](https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/paid-content-alert/)
 
-Any feedback is more than welcomed, same as reporting websites you are missing here.
+Any feedback is more than welcomed, same as reporting websites you are missing on the list.
 
 ## Development
 ### Adding new website
