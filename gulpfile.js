@@ -8,7 +8,8 @@ var files = [
     'icon128.png',
     'style.css',
     'manifest.json',
-    '_locales/**/*.*'
+    '_locales/**/*.*',
+    'sites.json'
 ];
 
 var jsFiles = [
