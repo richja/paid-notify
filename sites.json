@@ -101,6 +101,7 @@
       ["denik.cz", "searchForClass", "paywall-article-chapter", 2],
       ["independent.ie", "searchForId", "flip-pay"],
       ["zive.cz", "searchForClass", "premium-info"],
-      ["firstclass.cz", "searchForClass", "membership-content access-restricted"]
+      ["firstclass.cz", "searchForClass", "membership-content access-restricted"],
+      ["refresher.cz", "searchForSelector", ".Article-Lock[data-type='hard']", "https://refresher.cz/85145-10-nejlepsich-hollywoodskych-komedii-21-stoleti", "https://refresher.cz/85521-Muz-zaluje-Apple-o-1-000-000-000-000-dolaru-Pry-mel-v-iPhonu-specialni-funkce-ktere-mu-firma-ukradla-na-vyvoj-iOS"]
     ]
 }
