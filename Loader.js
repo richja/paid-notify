@@ -7,8 +7,8 @@ export const getSites = async () => {
         sitesArr = require("./sites.json");
     }
     else {
-        // const sitesFile = "https://raw.githubusercontent.com/richja/paid-notify/master/sites.json";
-        const sitesFile = chrome.runtime.getURL("sites.json");
+        const sitesFile = "https://raw.githubusercontent.com/richja/paid-notify/master/sites.json";
+        // const sitesFile = chrome.runtime.getURL("sites.json");
         const sitesRaw = await load(sitesFile);
         sitesArr = await sitesRaw.json();
     }
