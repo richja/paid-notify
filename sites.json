@@ -93,7 +93,7 @@
       ["shippingwatch.dk", "searchForClass", "lockedArticleContainer"],
       ["finans.dk", "searchForClass", "artViewLock"],
       ["business.dk", "searchForClass", "paywall-hard"],
-      ["berlingske.dk", "searchForClass", "paywall-hard", "https://www.berlingske.dk/samfund/professor-slaaende-andel-af-coronadoedsfald-i-hovedstaden-og-sjaelland-kan", "https://www.berlingske.dk/samfund/dronning-margrethe-ansaetter-ny-hofdame"],
+      ["berlingske.dk", "searchForClass", "view-offer", "https://www.berlingske.dk/samfund/professor-slaaende-andel-af-coronadoedsfald-i-hovedstaden-og-sjaelland-kan", "https://www.berlingske.dk/samfund/dronning-margrethe-ansaetter-ny-hofdame"],
       ["idnes.cz", "searchForId", "paywall"],
       ["denikn.cz", "searchForId", "e_lock__hard", "https://denikn.cz/354496/babisem-kritizovany-namestek-dostal-po-rezignaci-pres-milion-aby-neodesel-ke-konkurenci-za-sedm-tydnu-se-na-urad-vratil", "https://denikn.cz/314443/odemkli-jsme-pro-vas-klicove-clanky-o-koronaviru-prectete-si-je/"],
       ["dennikn.sk", "searchForId", "e_lock__hard"],
